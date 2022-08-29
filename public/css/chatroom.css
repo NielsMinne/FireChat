@@ -1,0 +1,238 @@
+/**
+* CSS file -- Specific: Chatroom
+*/
+
+/**
+* Chatroom Container
+*/
+
+.chatroom-div {
+    justify-content: space-between;
+    background-color: var(--chatroom-background-color);
+    width: 95vw;
+    max-width: 50em;
+    height: 95vh;
+    margin-top: 1.2em;
+    border-radius: var(--btn-border-radius)
+}
+
+/** --------------------------------------------------------------------------------------------------------- **/
+
+/**
+* Nav Chatroom 
+*/
+
+
+.profile-picture {
+    margin-left: 0;
+    border-radius: 10px;
+    width: 3em;
+    height: 3em;
+    padding-right: 2px;
+}
+
+.profile-user {
+    color: var(--dark-text-color);
+}
+
+.chatroom-id {
+    font-size: 1.5em;
+    color: var(--dark-text-color);
+}
+
+.flex-column .logout {
+    margin: .4em 0;
+}
+
+/* User Join Bubbles */
+
+.users-joined {
+    flex-wrap: wrap;
+    padding: 0 .6em;
+    padding-top: .5em;
+
+}
+
+.users-joined p {
+    --font-weight: 500;
+    margin: 0;
+    font-size: .9em;
+    font-weight: var(--font-weight);
+    color: var(--dark-text-color);
+}
+
+.users-joined p::after {
+    content: '';
+    display: inline-block;
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    background-color: var(--online-color);
+    margin-left: .7em;
+    margin-bottom: .05em;
+
+}
+
+.user-join-bubble {
+    margin: .2em;
+    padding: .2em .5em .2em .8em;
+    background-color: var(--chatroom-background-color);
+    border-radius: var(--border-radius);
+}
+
+/** --------------------------------------------------------------------------------------------------------- **/
+
+/**
+* Chat field 
+*/
+
+.chat-field {
+    position: relative;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.message-show {
+    padding: 1em .5em .5em .5em;
+    margin: 0;
+    word-break: break-word;
+}
+
+.message-info {
+    --font-weight: 500;
+    font-size: .8em;
+    font-weight: var(--font-weight);
+    padding: .8em .5em;
+    margin: 0;
+    word-break: break-word;
+}
+
+.my-bubble,
+.other-bubble {
+    background-color: var(--mybubble-background-color);
+    width: 70vw;
+    word-wrap: break-word;
+    margin: 0 1em .7em auto;
+    border-radius: 10px 10px 0 10px;
+    max-width: 18em;
+}
+
+.other-bubble {
+    background-color: var(--other-bubble-background-color);
+    margin: 0 0 .7em 1em;
+    border-radius: 10px 10px 10px 0;
+}
+
+.other-bubble .delete-icon {
+    display: none;
+}
+
+.my-bubble .delete-icon {
+    margin: 0;
+    padding: .5em;
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.my-bubble .delete-icon:hover {
+    opacity: 1;
+    color: var(--error-message-color);
+}
+
+/** --------------------------------------------------------------------------------------------------------- **/
+
+/**
+* Message Input
+*/
+
+.message-div {
+    justify-content: center;
+    width: 95vw;
+    max-width: 50em;
+    height: 7vh;
+    max-height: 20em;
+}
+
+.message-input-field {
+    width: 58vw;
+    max-width: 43em;
+    height: 7vh;
+    max-height: 20em;
+    border-radius: var(--btn-border-radius);
+    border: none;
+    outline: none;
+    padding-left: 1em;
+    margin: 0 6px 0 0;
+    background-color: var(--input-background-color);
+    color: var(--dark-text-color)
+}
+
+.message-input-field::placeholder {
+    color: var(--placeholder-text-color);
+}
+
+.send-button,
+.emoji-btn {
+    width: 15vw;
+    max-width: 6em;
+    height: 7vh;
+    max-height: 20em;
+}
+
+.emoji-btn {
+    margin-right: 5px;
+}
+
+.emoji-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 74vh;
+    background-color: var(--chatroom-background-color);
+    border-radius: var(--border-radius);
+    width: 80vw;
+    max-width: 48em;
+    justify-content: space-around;
+    margin-right:.5em
+}
+
+.chatroom-div .hide {
+    display: none;
+}
+
+.emoji-panel a {
+    color: var(--emoji-color);
+    margin: .2em;
+    text-align: center;
+    padding: 0 2em;
+    
+    
+}
+
+@media only screen and (min-height: 850px){
+.emoji-panel{
+    top: 77vh;
+}
+}
+
+@media only screen and (max-width: 700px){
+
+    .emoji-panel{
+        width: 90vw;
+        top: 77vh;
+    }
+   
+    .emoji-panel a{
+        padding: 0 1em;
+    }
+
+    .message-input-field{
+        width: 62vw;
+    }
+    
+    .users-joined{
+        justify-content: center;
+    }
+
+
+}

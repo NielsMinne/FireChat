@@ -1,0 +1,76 @@
+
+:root,[theme="light"] {
+/**
+* Font varibales
+*/
+    --font-family: 'Poppins', sans-serif;
+    --font-weight: 300;
+    
+/**
+* Color variables
+ */
+
+    /* General */
+    --body-background-color: hsl(0, 0%, 6%);
+    --primary-text-color: hsl(0, 0%, 100%);
+    --dark-text-color: hsl(0,0%,0%);
+    --backdrop-color-login: hsla(0, 0%, 16%, 0.86);
+    --error-message-color:hsl(0, 73%, 47%);
+
+    /* Button */
+    --btn-background-color: hsl(40, 60%, 55%);
+    --btn-hover-color: hsl(40, 90%, 55%);
+    --icon-hover-color: hsl(235, 60%, 45%);
+
+    /* Hub */
+    --nav-background-color: hsl(0, 0%, 13%);
+    --chatroomcard-hover-color: hsl(0, 0%, 95%);
+    --user-icon-color: hsl(0, 0%, 15%);
+
+    /* Chatroom */
+    --chatroom-background-color:hsla(0, 0%, 100%, 0.8);
+    --mybubble-background-color: hsla(215, 90%, 60%, 0.9);
+    --other-bubble-background-color: hsla(235, 90%, 60%, 0.9);
+
+    --emoji-color: hsl(40, 100%, 50%);
+    --online-color: hsl(120, 93%, 40%);
+
+    --placeholder-text-color: hsl(0, 0%, 20%);
+    --input-background-color: hsl(0, 0%, 100%);
+
+/**
+* style variables
+*/ 
+    --box-shadow: 0 0 5px hsl(0, 0%, 25%);
+    --image-pos: 50% 70%;
+
+    --full-height: 100vh;
+    --full-width: 100vw;
+    
+    --gap: 1em;
+
+    --btn-border-radius: 5px;
+    --border-radius: 10px;
+}
+
+
+[theme="dark"]{
+
+    /* General */
+    --primary-text-color: hsl(0, 0%, 100%);
+    --dark-text-color: hsl(0, 0%, 100%);
+
+    /* Hub */
+    --user-icon-color: hsl(0, 0%, 85%);
+    --box-shadow: 0 0 5px hsl(0, 0%, 60%);
+    --chatroomcard-hover-color: hsl(0, 0%, 15%);
+
+
+    /* Chatroom */
+    --mybubble-background-color: hsla(0, 0%, 29%, 0.9);
+    --other-bubble-background-color: hsla(0, 0%, 7%, 0.9);
+    --chatroom-background-color:hsla(0, 0%, 15%, 0.8);
+    --emoji-color: hsl(0, 0%, 100%);
+    --input-background-color: hsl(0, 0%, 25%);
+    --placeholder-text-color: hsl(0, 0%, 70%);
+}

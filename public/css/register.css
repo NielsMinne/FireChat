@@ -1,0 +1,121 @@
+/**
+*   CSS file -- Specific: Login and Register Page
+*/
+
+
+
+/**
+*   Containers
+**/
+#appLogin,#appRegister{
+    height: var(--full-height);
+    width: var(--full-width);
+}
+
+#appChat{
+    align-items: flex-start;
+}
+
+#loginContainer,#registerContainer{
+    
+    background-color: rgba(40, 40, 40, 0.86);
+    border-radius: var(--border-radius);
+    width: 90vw;
+    height: 85vh;
+    max-width: 30em;
+    max-height: 40em;
+}
+
+#loginContainer form,#registerContainer form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    width: 80vw;
+    max-width: 350px;
+}
+
+/** ---------------------------------------------------------------------------------------------- **/
+
+/**
+*   Label
+*/
+
+.label-input{
+    border-bottom: 2px solid white;
+    padding-bottom: .3em;
+}
+
+/** ---------------------------------------------------------------------------------------------- **/
+
+/**
+*   Input Field
+*/
+
+.input-field{
+    padding: 1rem 1rem;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border:none;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.input-field:focus{
+    border: 2px solid var(--btn-background-color);
+    outline:none;
+}
+
+.error {
+    margin: 0;
+    font-size: .8em;
+    color:var(--error-message-color);
+}
+
+/** ---------------------------------------------------------------------------------------------- **/
+
+/**
+*   Buttons + Text
+*/
+
+form .login-btn,form .register-btn{
+    height: 3.2em;
+    width: 80vw;
+    max-width: 21.9em;
+    
+}
+
+.login,.register{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding-top: 2em;
+    cursor: default;
+}
+
+.login span,.register span{
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--btn-hover-color);
+    cursor: pointer;
+}
+
+
+.capital-text{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+}
+
+.firechat-title{
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 700px){
+    form .login-btn{
+        max-width: 25em;
+    }
+}

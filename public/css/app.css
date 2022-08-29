@@ -1,0 +1,203 @@
+/**
+*   CSS file -- Specific: Chat application 
+*/
+
+/** ---------------------------------------------------------------------------------------------- **/
+
+/**
+* Scrollbar Styling
+*/
+
+    /* width / height*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--btn-background-color);
+    border-radius: 10px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--btn-hover-color);
+  }
+
+/** ---------------------------------------------------------------------------------------------- **/
+
+/**
+* HTML elements
+*/
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--nav-background-color); 
+    color: var(--primary-text-color);
+    
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    height: var(--full-height);
+    width: var(--full-width);
+}
+
+div h2{
+   font-weight: var(--font-weight);
+   text-align: center;
+}
+
+hr{
+    border: 1px solid rgba(255, 255, 255, 0.678);
+    width: 80vw;
+    max-width: 40em;
+}
+
+/** ---------------------------------------------------------------------------------------------- **/
+
+/**
+* Helper Classes (add to component as class)
+*/
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.flex{
+    display:flex;
+    gap: var(--gap);
+}
+
+.flex-start{
+    justify-content: flex-start;
+}
+
+.no-gap{
+    gap:0;
+}
+
+.flex-space-between{
+    justify-content: space-between;
+}
+
+.flex-space-around{
+    justify-content: space-around;
+}
+
+.hide{
+    display: none;
+}
+
+.padding-left-right{
+    padding: 0 1em;
+}
+
+/** ---------------------------------------------------------------------------------------------- **/
+
+/**
+* Containers
+*/
+
+#appLogin{
+    background-image: url(../assets/images/background-1.jpg);
+    background-position: var(--image-pos);
+    background-size: cover;
+}
+
+#appRegister{
+    background-image : url(../assets/images/background-3.jpg);
+    background-size: cover;
+    background-position: var(--image-pos);
+}
+
+#appChat{
+    background-image : linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/background-2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: var(--full-height);
+    width: var(--full-width);
+}
+
+/**
+* Buttons
+*/
+
+
+.btn{
+    width: 5em;
+    height: 3em;
+    background-color:var(--btn-background-color);
+    border-radius: var(--btn-border-radius);
+    border: none;
+    color:white;
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover{
+    background-color:var(--btn-hover-color);
+    color: var(--icon-hover-color);
+    cursor: pointer;
+}
+
+/**
+* Logo animation Login 
+*/
+
+.logo-animation-div{
+    position: absolute;
+    align-items: center;
+    bottom: 40vh;
+    opacity: 1;
+    animation-name: moveUp;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+.logo-image{
+    height: 10em;
+    width: 8em;
+    margin: 0 12vw;
+}
+
+.logo-name{
+    margin: 0;
+    font-size: 3em;
+}
+
+@keyframes moveUp{
+    0% {opacity:0; bottom: 80vh };
+    25% {opacity: 0; bottom: 70vh};
+    50% {opacity: 0; bottom: 60vh};
+    75%{opacity:0;bottom:50vh};
+    100%{opacity: 1;bottom: 40vh};
+}
+
+/**
+* Media query for mobile adjustments
+*/
+
+@media only screen and (max-width: 700px){
+    body {
+      font-size: 14px;
+    }
+
+    
+    
+
+    
+  }
+
